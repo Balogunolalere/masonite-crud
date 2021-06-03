@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+	<h2>Are you sure you want to delete article with id {{post.id}}</h2>
+    <form action="/articles/{{post.id}}/deleted" method="POST">
+    	{{ csrf_field }}
+    	<button>Delete</button> 
+    </form>
+    <a href="/articles"><button>back to articles</button></a>
+
+
+
+{% endblock content %}

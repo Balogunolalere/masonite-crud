@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div>
+    	<form action="/post/create" method="Post">
+    		{{ csrf_field }}
+    		<label>title</label>
+    		<input type="text" name="title">
+    		<label>author</label>
+    		<input type="text" name="author">
+    		<label>description</label>
+    		<input type="text" name="description">
+    		<label>body</label>
+    		<textarea name="body"></textarea>
+    		<input type="submit" name="submit">
+    	</form>
+    </div>
+{% endblock content %}

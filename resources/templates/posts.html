@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <section>
+	{% for post in posts %}
+		<div>
+		<h1>Title:{{post.title}}</h1>
+		<h4>Author:{{post.author}}</h4>
+		<h2>Desciption:{{post.description}}</h2>
+		<h2>Body:{{post.body}}</h2>
+		<a href="/articles/{{post.id}}/update"><button>update</button></a>
+		<a href="/articles/{{post.id}}/delete"><button>delete</button></a>
+
+		</div>
+		<hr>
+		<br>
+	{% endfor %}
+	</section>
+{% endblock content %}
